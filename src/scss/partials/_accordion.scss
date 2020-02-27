@@ -1,0 +1,180 @@
+
+/* Clean up the lists styles */
+ul.accordion-bellow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position:relative;
+      height:100%; 
+      width: 100%;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+    }
+
+.accordion-bellow,
+.accordion-bellowExpanded {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+   -webkit-flex: 0.0000001 0 auto; /* 0.0000001 to correct flex grow bug https://code.google.com/p/chromium/issues/detail?id=460510 */
+          -ms-flex: 0.0000001 0 auto;
+              flex: 0.0000001 0 auto;
+
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-align-items: stretch;
+           -ms-flex-align: stretch;
+              align-items: stretch;
+        -webkit-transition:  .2s 0s linear;
+             -o-transition:  .2s 0s linear;
+                transition:  .2s 0s linear;
+}
+
+.accordion-bellow {
+  -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 0 0 auto;
+        align-items: stretch;
+        display: flex;
+}
+
+.accordion-foldContent {
+  padding: 0 0.5em;
+}
+
+input[type='radio'].accordion-input,
+input[type='checkbox'].accordion-input {
+  display: none;
+}
+
+.accordion-fold label {
+  cursor: pointer;
+  flex: 0 0 auto;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  padding: 0 .5em;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+}
+.accordion-fold.accordion-heading {
+  color: #999;
+  display:block;
+  border-bottom:1px solid #dbdbdb;
+  height: 2.5em;
+  font-size: 1.1em;
+  line-height: 2.5em;
+  font-weight: normal;
+  cursor: pointer;
+  background-color: #E8E8E8;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  label {
+    justify-content: left;
+  }
+}
+
+.accordion-heading .icon-inline {
+  display: flex;
+}
+.icon-inline .svgicon {
+max-width: 24px;
+max-height: 24px;
+padding-right: 16px;
+fill: gray;
+}
+
+/* Caret Right Icon */
+svg.a19-caretRight.svgicon {
+width: 40px;
+height: 60px;
+transform: rotate(-90deg);
+transition: 0.15s ease-in;
+transform-origin: 2px 12px;
+}
+input[type='radio'].accordion-input:checked + .accordion-bellow .accordion-heading .btnIcon svg.a19-caretRight.svgicon {
+transform: rotate(90deg);
+}
+
+/* Plus Icon */
+svg.a19-plus.svgicon {
+  max-width: 48px;
+  max-height: 48px;
+  height: 14px;
+  }
+  svg.a19-plus.svgicon .shape-secondary {
+  transition: .3s ease-in-out;
+  transition-delay: .2s;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  }
+  input[type='radio'].accordion-input:checked + .accordion-bellow .accordion-heading .btnIcon svg.a19-plus.svgicon .shape-secondary {
+    transition: .3s ease-in-out;
+    transition-delay: .2s;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+.accordion-foldCollapse {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  opacity: 0;
+  height: 0;
+  transition: 0.25s ease-out;
+  overflow: hidden;
+}
+
+input[type='radio'].accordion-input:checked + .accordion-bellow,
+input[type='checkbox'].accordion-input:checked + .accordion-bellow {
+  flex: 1 0 auto;
+}
+
+input[type='radio'].accordion-input:checked + .accordion-bellow .accordion-foldCollapse,
+input[type='checkbox'].accordion-input:checked + .accordion-bellow .accordion-foldCollapse {
+  flex: 1 0 auto;
+  overflow:auto;
+  opacity: 1;
+  color: #606060;
+  transition: 0.25s ease-in;
+}
+
+input[type='radio'].accordion-input:checked + .accordion-bellow .accordion-heading,
+input[type='checkbox'].accordion-input:checked + .accordion-bellow .accordion-heading {
+  color: black;
+  background:transparent;
+  border: none;
+}
+
+// OVERRIDES
+.accordion input[type='checkbox'].accordion-input:not(:checked) + .card {
+  border-bottom: none;
+}
+.card .accordion-fold label {
+  justify-content: center;
+}
+.card-body.accordion-foldCollapse {
+  height: 0;
+}
+input[type='radio'].accordion-input:checked + .accordion-bellow .card-body.accordion-foldCollapse,
+input[type='radio'].accordion-input:checked + .accordion-bellow .card-body .accordion-foldCollapse, 
+input[type='checkbox'].accordion-input:checked + .accordion-bellow .card-body.accordion-foldCollapse,
+input[type='checkbox'].accordion-input:checked + .accordion-bellow .card-body .accordion-foldCollapse {
+  height: 100%;
+}

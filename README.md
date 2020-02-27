@@ -1,2 +1,0 @@
-# PriceTable
-Created with CodeSandbox
