@@ -1,0 +1,241 @@
+// Text Defaults
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+ul {
+    padding-left: 16px
+}
+
+ul li {
+    margin-bottom: 4px;
+}
+
+.panel a:not(.btn,
+.buttonIconLabelGroup-label),
+p a:not(.btn,
+.buttonIconLabelGroup-label) {
+    color: $clr-primary-dark;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+
+    &:hove:not(.btn,
+    .buttonIconLabelGroup-label) {
+        color: $clr-primary-vibrant;
+        font-weight: 600;
+    }
+}
+
+// Text Colors
+.text-blue {
+    color: $clr-primary-vibrant;
+}
+
+.text-dark-blue,
+.text-info {
+    color: $clr-primary-dark;
+}
+
+.text-orange-dark,
+.text-warning {
+    color: $clr-action-orange-dark;
+}
+
+.text-white {
+    color: $clr-white;
+}
+
+.text-red,
+.text-danger {
+    color: $clr-alert-red;
+}
+
+// Text Align
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Font Weight
+em {
+    font-weight: 600;
+    font-style: normal
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-heavy {
+    font-weight: 900;
+}
+
+// Convert Case
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+// Relative Sizing
+.tiny {
+    font-size: 0.56rem
+}
+
+.small {
+    font-size: 0.75rem
+}
+
+.base {
+    font-size: 1rem
+}
+
+.medium {
+}
+
+.large {
+    font-size: 2rem
+}
+
+.xlarge {
+    font-size: 3rem
+}
+
+.xxlarge {
+    font-size: 4rem
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+.h1 {
+    font-family: 'Proxima Nova', "Helvetica", "Arial, sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 3em;
+}
+
+h2,
+.h2 {
+    font-family: 'Proxima Nova', "Helvetica", "Arial, sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 2em;
+}
+
+h3,
+.h3 {
+    font-family: 'Proxima Nova', "Helvetica", "Arial, sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+}
+
+h4,
+.h4 {
+    font-family: 'Proxima Nova', "Helvetica", "Arial, sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+}
+
+h5,
+.h5 {
+    font-family: 'Proxima Nova', "Helvetica", "Arial, sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+}
+
+h6,
+.h6 {
+    font-family: 'Proxima Nova', "Helvetica", "Arial, sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 12px;
+}
+
+p {
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+// Buttons and Forms
+@mixin button-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: $clr-white;
+}
+
+@mixin button-label-2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $clr-white;
+}
+
+@mixin button-label-3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: $clr-white;
+}
+
+@mixin button-label-large {
+    font-size: 32px;
+    font-weight: bold;
+    color: $clr-white;
+}
+
+@mixin button-label-inactive {
+    color: $clr-primary-vibrant;
+}
+
+@mixin icon-label-2 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+// Navigation
+@mixin step-wizard-label {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    color: $clr-primary-vibrant;
+}
+
+code {
+    color: $clr-alert-red
+}
+

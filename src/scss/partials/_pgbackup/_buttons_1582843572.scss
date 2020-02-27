@@ -1,0 +1,312 @@
+@mixin btn-basic($bg-color, $bd-color, $bd-radius) {
+	background-color: $bg-color;
+	border: solid 1px $bd-color;
+	border-radius: $bd-radius;
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	height: 16px;
+	text-align: center;
+	padding:8px 24px;
+	vertical-align: middle;
+	position: relative;
+	@include button-label;
+}
+
+.btn {
+	@include btn-basic($clr-primary-vibrant, $clr-primary-dark, $bd-end-caps);
+}
+.btn-medium {
+	height: 36px;
+	border-radius: $bd-radius-default;
+	@include button-label-2;
+}
+.btn-large {
+	border-radius: $bd-radius-default;
+	height: 48px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	line-height: 28px;
+	@include button-label-large
+}
+.btn-large .btn-icon {
+	max-width: 48px;
+	max-height: 48px;
+	margin-right: 24px;
+}
+
+.btn .emsi-uparrowCircle .shape.marker,
+.btn .emsi-uparrowCircle .shape.arrow {
+	fill: $clr-primary-vibrant;
+}
+
+.btn-xlarge {
+	border-radius: $bd-radius-large;
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	height: 112px;
+	padding: 24px;
+	white-space: nowrap;
+	line-height: 28px;
+	@include button-label-large;
+}
+
+.btnIcon {
+	cursor: pointer;
+}
+.btnIcon .svgicon .shape {
+	fill: $clr-primary-vibrant;
+	opacity: 0.5;
+}
+.btnIcon:hover .svgicon .shape {
+	fill: $clr-primary-vibrant;
+	opacity: 1;
+	transition: 0.25s linear;
+}
+
+// Circle Buttons
+.btn-circle {
+  width: 64px;
+  height: 64px;
+  padding:0;
+  line-height: 14px;
+  border-radius: $bd-end-caps;
+}
+.btn-circle .svgicon {
+	max-width: 32px;
+	max-height: 32px;
+}
+
+.btn-circleMedium {
+  width: 96px;
+  height: 96px;
+}
+.btn-circleMedium .svgicon {
+	max-width: 48px;
+	max-height: 48px;
+}
+.buttonIconLabelGroup {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 8px;
+}
+
+.buttonIconLabelGroup.buttonIconLabelGroup--horz {
+	flex-direction: row;
+	margin-bottom: 12px;
+
+	.buttonIconLabelGroup-label {
+		margin-left: 8px;
+		margin-top: 0;
+		text-align: left;
+	}
+
+	.btn-group &:last-child {
+		margin-bottom: 0
+	}
+
+}
+
+.buttonIconLabelGroup .buttonIconLabelGroup-label {
+	@include icon-label-2;
+	background: none;
+	border: none;
+	display: block;
+	text-align: center;
+	margin-top: 4px;
+}
+
+.buttonIconLabelGroup-label--cta,
+a.buttonIconLabelGroup-label--cta {
+	color: $clr-action-green
+}
+.buttonIconLabelGroup-label--secondary,
+a.buttonIconLabelGroup-label--secondary {
+	color: $clr-action-orange
+}
+.btn-circleSmall {
+  width: 44px;
+  height: 44px;
+  background-color: $clr-primary-vibrant;
+  border: solid 1px $clr-primary-dark;
+}
+.btn-circleSmall .svgicon {
+  	max-width: 16px;
+	max-height: 16px;
+}
+
+.btn-circleSmaller {
+  width: 32px;
+  height: 32px;
+  background-color: $clr-primary-vibrant;
+  border: solid 1px $clr-primary-dark;
+}
+.btn-circleSmaller .svgicon {
+  	max-width: 16px;
+	max-height: 16px;
+}
+
+.btn-circleLarge {
+	width: 144px;
+  	height: 144px;
+}
+
+.btn-circleLarge .svgicon {
+	max-width: 64px;
+	max-height: 64px;
+}
+
+// Button Group
+.buttonCTAGroup > .btn:first-child {
+	justify-content: left;
+	padding-right: 96px;
+}
+
+.buttonCTAGroup > .btn:last-child {
+	margin-left: -72px;
+	box-shadow: 0 0 0 8px $clr-white;
+}
+
+.btn--smallIcon > .svgicon {
+	max-width: 32px;
+	max-height: 32px;
+}
+
+.button-group--vert {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-y: auto;
+	margin-bottom: 24px;
+	 .btn {
+		margin-bottom: 8px;
+		max-height: 28px;
+		line-height: 16px;
+	}
+}
+
+.button-group--condensed {
+	.btn--inactive {
+		padding: 0;
+		background: transparent;
+		border: none;
+		justify-content: left;
+	}
+}
+.button-group--vert:not(.flex-justify--flexStart) {
+	padding: 24px 0;
+	 .btn {
+		margin-bottom: 16px;
+	}
+}
+
+// Control Modifiers
+
+.btn--ctrlLeft {
+	justify-content: flex-end;
+	border: none;
+	background: $clr-primary-light;
+}
+
+.btn--ctrlLeft > * {
+	margin-right: 24px;
+}
+
+.btn--ctrlRight {
+	justify-content: flex-start;
+	border: none;
+	background: $clr-primary-light;
+}
+
+.btn--ctrlRight > * {
+	margin-left: 24px;
+}
+
+.btn--ctrlBottomLeft {
+	justify-content: flex-end;
+	align-items: flex-start;
+	border: none;
+	background: $clr-primary-light;
+}
+
+.btn--ctrlBottomLeft > * {
+	margin-right: 24px;
+	margin-top: 24px;;
+}
+
+.btn-ctrl--warning {
+	background: $clr-action-orange-faded;
+}
+.btn--leftDialogArrow {
+	overflow: visible;
+}
+.btn--leftDialogArrow::after {
+	content: "";
+    position: absolute;
+    top: 10px;
+    right:-24px;
+    z-index: 5;
+    border: solid 12px transparent;
+    border-right-color: $clr-secondary-lightest;
+}
+
+.dialog-bubble--noArrow {
+	border-radius: $bd-radius-default;
+	background: $clr-secondary-lightest;
+	padding: 0 16px;
+}
+
+// Button Modifiers
+.btn--secondary {
+	background-color: $clr-action-orange-vibrant;
+	border: solid 1px $clr-action-orange;
+}
+.btn--vanilla {
+	background-color: $clr-white;
+	border: solid 1px $clr-secondary-lightest;
+	color: $clr-secondary-dark;
+	font-weight: normal;
+}
+.btn--cta {
+	background-color: $clr-action-green-vibrant;
+	border: solid 1px $clr-action-green;
+}
+.btn--inactive {
+	background-color: $clr-primary-lighter;
+	border: solid 1px $clr-primary-vibrant;
+	@include button-label-inactive;
+}
+.btn--inactive .shape {
+	stroke: $clr-primary-vibrant;
+	stroke-width: 2;
+}
+
+.btn-large  .btn-icon--larger {
+	max-height: 88px;
+	max-width: 88px;
+}
+
+.btn.btn--alert {
+	background: $clr-alert-red;
+	border-color: $clr-alert-red;
+	.emsi-uparrowCircle .shape.marker,
+	.emsi-uparrowCircle .shape.arrow {
+		fill: $clr-alert-red;
+	}
+
+	.emsi-uparrowCircle .shape.circle {
+		stroke: $clr-alert-red;
+	}
+}
+
+.btn .emsi-uparrowCircle .shape.circle {
+	stroke: $clr-primary-dark;
+}
