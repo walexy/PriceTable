@@ -439,11 +439,17 @@
             font-weight: 500;
             color: rgba(255, 255, 255, 0.46);
         }
+
+        @media (max-width:767px) {
+            &.grid-ItemTitle--start {
+                grid-row-start: 2;
+                grid-column-end: 12;
+            }
+        }
     }
 
     .grid-itemFeatures {
-        grid-column-end: span 5;
-        font-size: .8em;
+        grid-column-end: span 6;
     }
 
     .grid-itemFeatures .grid-itemFeaturesList {
@@ -460,7 +466,7 @@
 
     .grid-ItemCTA {
         text-align: center;
-        grid-column-end: span 3;
+        grid-column-end: span 2;
 
         .h3 {
             letter-spacing: .03em;
@@ -481,62 +487,19 @@
 
 @media (max-width:768px) {
     .pureden-grid.--pricingGrid .grid-cell {
-        /* Rounded corners on outside cells */
-        &:nth-child(3) {
-            border-top-left-radius: $bd-radius-large;
-            background: #1A2127;
-        }
-
-        &:nth-child(3) {
-            border-top-right-radius: $bd-radius-large;
-        }
-
-        &:nth-last-child(3) {
-            border-bottom-left-radius: 0;
-        }
-
-        &:nth-last-child(2) {
-            border-bottom-left-radius: $bd-radius-large;
-        }
-
-        &:last-child {
-            border-bottom-right-radius: $bd-radius-large;
-        }
-
         &.grid-header {
-            display: none;
+            visibility: hidden !important;
+            opacity: 0;
         }
-
+    }
         &.grid-itemTitle {
             grid-column-end: span 12;
         }
-
         &.grid-itemFeatures {
             grid-column-end: span 8;
         }
-
         &.grid-ItemCTA {
             grid-column-end: span 4;
         }
     }
 }
-
-@media (max-width:620px) {
-    .pureden-grid.--pricingGrid .grid-cell {
-        &:nth-last-child(2) {
-            border-bottom-left-radius: 0;
-        }
-
-        &.grid-itemFeatures {
-            grid-column-end: span 12;
-        }
-
-        &.grid-ItemCTA {
-            grid-column-end: span 12;
-        }
-    }
-}
-
-
-
-

@@ -278,9 +278,10 @@
       line-height: 1.8em;
       font-weight: 500;
       color: rgba(255, 255, 255, 0.46); }
+    .pureden-grid.--pricingGrid .grid-itemTitle.grid-ItemTitle--start {
+      grid-row-start: 2; }
   .pureden-grid.--pricingGrid .grid-itemFeatures {
-    grid-column-end: span 5;
-    font-size: .8em; }
+    grid-column-end: span 6; }
   .pureden-grid.--pricingGrid .grid-itemFeatures .grid-itemFeaturesList {
     width: 42%; }
   .pureden-grid.--pricingGrid .grid-itemFeaturesList .grid-itemFeaturesListItem {
@@ -289,43 +290,13 @@
       color: #8BC34A; }
   .pureden-grid.--pricingGrid .grid-ItemCTA {
     text-align: center;
-    grid-column-end: span 3; }
+    grid-column-end: span 2; }
     .pureden-grid.--pricingGrid .grid-ItemCTA .h3 {
       letter-spacing: .03em;
       margin-bottom: 1em; }
 
 .pureden-section {
   padding: 2rem; }
-
-@media (max-width: 768px) {
-  .pureden-grid.--pricingGrid .grid-cell {
-    /* Rounded corners on outside cells */ }
-    .pureden-grid.--pricingGrid .grid-cell:nth-child(3) {
-      border-top-left-radius: 16px;
-      background: #1A2127; }
-    .pureden-grid.--pricingGrid .grid-cell:nth-child(3) {
-      border-top-right-radius: 16px; }
-    .pureden-grid.--pricingGrid .grid-cell:nth-last-child(3) {
-      border-bottom-left-radius: 0; }
-    .pureden-grid.--pricingGrid .grid-cell:nth-last-child(2) {
-      border-bottom-left-radius: 16px; }
-    .pureden-grid.--pricingGrid .grid-cell:last-child {
-      border-bottom-right-radius: 16px; }
-    .pureden-grid.--pricingGrid .grid-cell.grid-header {
-      display: none; }
-    .pureden-grid.--pricingGrid .grid-cell.grid-itemTitle {
-      grid-column-end: span 12; }
-    .pureden-grid.--pricingGrid .grid-cell.grid-itemFeatures {
-      grid-column-end: span 8; }
-    .pureden-grid.--pricingGrid .grid-cell.grid-ItemCTA {
-      grid-column-end: span 4; } }
-
-@media (max-width: 620px) {
-  .pureden-grid.--pricingGrid .grid-cell { }
-    .pureden-grid.--pricingGrid .grid-cell.grid-itemFeatures {
-      grid-column-end: span 12; }
-    .pureden-grid.--pricingGrid .grid-cell.grid-ItemCTA {
-      grid-column-end: span 12; } }
 
 body {
   font-family: Montserrat, "Helvetica", "Arial", "sans-serif";
@@ -572,7 +543,7 @@ source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
   text-decoration: none;
   height: 16px;
   text-align: center;
-  padding: 4px 12px;
+  padding: 8px 24px;
   vertical-align: middle;
   position: relative;
   font-size: 12px;
@@ -582,13 +553,9 @@ source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
 .btn-medium {
   height: 36px;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: #FFFFFF; }
-
-@media (max-width: 768px) {
-  .btn-medium {
-    font-size: .6em; } }
 
 .btn-large {
   border-radius: 8px;

@@ -523,10 +523,6 @@
 
 @media (max-width:620px) {
     .pureden-grid.--pricingGrid .grid-cell {
-        &:nth-last-child(2) {
-            border-bottom-left-radius: 0;
-        }
-
         &.grid-itemFeatures {
             grid-column-end: span 12;
         }

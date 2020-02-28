@@ -298,19 +298,7 @@
   padding: 2rem; }
 
 @media (max-width: 768px) {
-  .pureden-grid.--pricingGrid .grid-cell {
-    /* Rounded corners on outside cells */ }
-    .pureden-grid.--pricingGrid .grid-cell:nth-child(3) {
-      border-top-left-radius: 16px;
-      background: #1A2127; }
-    .pureden-grid.--pricingGrid .grid-cell:nth-child(3) {
-      border-top-right-radius: 16px; }
-    .pureden-grid.--pricingGrid .grid-cell:nth-last-child(3) {
-      border-bottom-left-radius: 0; }
-    .pureden-grid.--pricingGrid .grid-cell:nth-last-child(2) {
-      border-bottom-left-radius: 16px; }
-    .pureden-grid.--pricingGrid .grid-cell:last-child {
-      border-bottom-right-radius: 16px; }
+  .pureden-grid.--pricingGrid .grid-cell { }
     .pureden-grid.--pricingGrid .grid-cell.grid-header {
       display: none; }
     .pureden-grid.--pricingGrid .grid-cell.grid-itemTitle {

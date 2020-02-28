@@ -1,0 +1,33 @@
+@mixin bd-light-gray {
+  border: solid 1px $clr-secondary-lighter;
+}
+
+.d-inline-block { display: inline-block }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bd-light-gray { 
+  @include bd-light-gray;
+ }
+.bd-primary-vibrant { border: solid 1px $clr-primary-vibrant; }
+.bd-primary-dark { border: solid 1px $clr-primary-dark; }
+
+.rounded-8 { border-radius: $bd-radius-default !important; }
+.rounded-8t-0b { border-radius: $bd-radius-default 0 !important; }
+.rounded-16 { border-radius: $bd-radius-large; }
+.rounded-end-caps { border-radius: $bd-end-caps; }
+
+.bg-green-vibrant {background-color: $clr-action-green-vibrant;}
+.bg-orange-vibrant {background-color: $clr-action-orange-vibrant;}
+.bg-primary-vibrant {background-color: $clr-primary-vibrant;}
+.bg-primary-inactive {background-color: $clr-primary-lighter;}
+
+.halfSized {
+	width: 50%
+}
+.quarterSized {
+	width: 25%
+}

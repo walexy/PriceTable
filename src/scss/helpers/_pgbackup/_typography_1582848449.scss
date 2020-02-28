@@ -194,9 +194,15 @@ p {
 }
 
 @mixin button-label-2 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: $clr-white;
+}
+
+@media (max-width:768px) {
+    @mixin button-label-2 {
+        font-size: 12px;
+    }
 }
 
 @mixin button-label-3 {

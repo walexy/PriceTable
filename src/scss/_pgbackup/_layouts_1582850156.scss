@@ -481,28 +481,6 @@
 
 @media (max-width:768px) {
     .pureden-grid.--pricingGrid .grid-cell {
-        /* Rounded corners on outside cells */
-        &:nth-child(3) {
-            border-top-left-radius: $bd-radius-large;
-            background: #1A2127;
-        }
-
-        &:nth-child(3) {
-            border-top-right-radius: $bd-radius-large;
-        }
-
-        &:nth-last-child(3) {
-            border-bottom-left-radius: 0;
-        }
-
-        &:nth-last-child(2) {
-            border-bottom-left-radius: $bd-radius-large;
-        }
-
-        &:last-child {
-            border-bottom-right-radius: $bd-radius-large;
-        }
-
         &.grid-header {
             display: none;
         }
@@ -523,10 +501,6 @@
 
 @media (max-width:620px) {
     .pureden-grid.--pricingGrid .grid-cell {
-        &:nth-last-child(2) {
-            border-bottom-left-radius: 0;
-        }
-
         &.grid-itemFeatures {
             grid-column-end: span 12;
         }
